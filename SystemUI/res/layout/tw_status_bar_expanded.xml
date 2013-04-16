@@ -8,9 +8,10 @@
         <View android:background="#ff091a24" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="@dimen/tw_notification_panel_header_height" />
         <ScrollView android:id="@id/scroll" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="@dimen/tw_notification_panel_header_line_height" android:overScrollMode="ifContentScrolls">
             <LinearLayout android:orientation="vertical" android:id="@id/scrollCart" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <HorizontalScrollView android:id="@id/quicksetting_scroller" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="@dimen/quick_setting_button_height">
+                <HorizontalScrollView android:id="@id/quicksetting_scroller" android:visibility="gone" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="@dimen/quick_setting_button_height">
                     <com.android.systemui.statusbar.policy.quicksetting.QuickSettingPanel android:orientation="horizontal" android:id="@id/quicksetting_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:divider="@drawable/tw_black_bg" android:showDividers="middle" />
                 </HorizontalScrollView>
+                <com.wanam.systemui.quickpanel.PowerWidget android:id="@id/exp_power_stat" android:layout_width="wrap_content" android:layout_height="@dimen/quick_setting_button_height" />
                 <LinearLayout android:orientation="vertical" android:id="@id/brightness_controller" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="56.0dip">
                     <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="55.0dip">
                         <ImageView android:id="@id/brightness_icon" android:clickable="true" android:layout_width="25.0dip" android:layout_height="fill_parent" android:layout_marginLeft="13.0dip" android:src="@drawable/ic_sysbar_brightness" android:contentDescription="@string/accessibility_brightness_icon" />

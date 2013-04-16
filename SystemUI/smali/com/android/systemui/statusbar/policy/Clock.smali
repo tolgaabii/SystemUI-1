@@ -72,7 +72,7 @@
     .parameter "defStyle"
 
     .prologue
-    const/4 v2, 0x0
+    const/4 v2, 0x1
 
     .line 98
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V

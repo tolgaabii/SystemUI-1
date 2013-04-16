@@ -139,6 +139,13 @@
     <dimen name="title_text_y">43.0dip</dimen>
     <dimen name="title_text_size">16.0sp</dimen>
     <dimen name="title_delete_button_margin">0.0dip</dimen>
+    <item type="dimen" name="APKTOOL_DUMMY_008b">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_008c">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_008d">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_008e">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_008f">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a4">false</item>
+    <item type="dimen" name="APKTOOL_DUMMY_00a5">false</item>
     <dimen name="mini_app_tray_item_width">170.0dip</dimen>
     <dimen name="mini_app_tray_item_height">130.0dip</dimen>
     <dimen name="mini_app_tray_container_padding">45.0dip</dimen>
@@ -164,11 +171,4 @@
     <dimen name="center_bar_fling_size">200.0dip</dimen>
     <dimen name="center_bar_docking_margin">30.0dip</dimen>
     <dimen name="center_bar_approval_distance">20.0dip</dimen>
-    <item type="dimen" name="APKTOOL_DUMMY_008b">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_008c">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_008d">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_008e">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_008f">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00a4">false</item>
-    <item type="dimen" name="APKTOOL_DUMMY_00a5">false</item>
 </resources>

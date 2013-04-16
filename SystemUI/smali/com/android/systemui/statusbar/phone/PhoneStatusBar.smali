@@ -270,6 +270,8 @@
 
 .field mPostCollapseCleanup:Ljava/lang/Runnable;
 
+.field mPowerWidget:Lcom/wanam/systemui/quickpanel/PowerWidget;
+
 .field mQueueLock:Ljava/lang/Object;
 
 .field mQuickSettingScroller:Landroid/widget/HorizontalScrollView;
@@ -1452,6 +1454,10 @@
     const-string v1, "Added status bar view"
 
     invoke-static {v0, v1}, Landroid/util/Slog;->d(Ljava/lang/String;Ljava/lang/String;)I
+
+    iget-object v1, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mPowerWidget:Lcom/wanam/systemui/quickpanel/PowerWidget;
+
+    invoke-virtual {v1}, Lcom/wanam/systemui/quickpanel/PowerWidget;->updateWidget()V
 
     .line 3061
     :cond_0
@@ -9031,6 +9037,22 @@
 
     invoke-virtual {v9, v10}, Landroid/widget/ScrollView;->setVerticalScrollBarEnabled(Z)V
 
+    move-object/from16 v0, p0
+
+    iget-object v9, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mStatusBarWindow:Lcom/android/systemui/statusbar/phone/StatusBarWindowView;
+
+    const v10, 0x7f0d0126
+
+    invoke-virtual {v9, v10}, Lcom/android/systemui/statusbar/phone/StatusBarWindowView;->findViewById(I)Landroid/view/View;
+
+    move-result-object v9
+
+    check-cast v9, Lcom/wanam/systemui/quickpanel/PowerWidget;
+
+    move-object/from16 v0, p0
+
+    iput-object v9, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mPowerWidget:Lcom/wanam/systemui/quickpanel/PowerWidget;
+
     .line 714
     new-instance v9, Lcom/android/systemui/statusbar/phone/PhoneStatusBar$MyTicker;
 
@@ -9501,6 +9523,12 @@
     iget-object v9, p0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mBroadcastReceiver:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {v1, v9, v2}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
+
+    move-object/from16 v0, p0
+
+    iget-object v9, v0, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->mPowerWidget:Lcom/wanam/systemui/quickpanel/PowerWidget;
+
+    invoke-virtual {v9}, Lcom/wanam/systemui/quickpanel/PowerWidget;->setupWidget()V
 
     .line 875
     sget-boolean v9, Lcom/android/systemui/statusbar/phone/PhoneStatusBar;->useTouchWizGUI:Z
